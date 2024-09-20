@@ -4,7 +4,7 @@ import os
 def display_disclaimer():
     print("""
 ===============================================================
-        HACKN'METAL - FOR RESEARCH AND EDUCATIONAL USE ONLY!
+        HACKN'METAL - FOR RESEARCH AND EDUCATIONAL USE ONLY !
         
         This tool is designed to be used ONLY on systems
         you own or have explicit permission to test.
