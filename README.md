@@ -1,121 +1,112 @@
 
-# HackN’Metal - Pentesting Like a Metalhead
-
+# HackN'Metal - Pentesting Like a Metalhead
 ![Cover](https://github.com/user-attachments/assets/12bfe2c0-0242-43d4-95e5-a884c60358f8)
-## What is HackN’Metal?
+
+```
+ _    _            _     _   _      __  __      _        _ 
+| |  | |          (_)   | | | |    |  \/  |    | |      | |
+| |__| | __ _ _ __ _ ___| |_| | ___| \  / | ___| |_ __ _| |
+|  __  |/ _` | '__| / __| __| |/ _ \ |\/| |/ _ \ __/ _` | |
+| |  | | (_| | |  | \__ \ |_| |  __/ |  | |  __/ || (_| | |
+|_|  |_|\__,_|_|  |_|___/\__|_|\___|_|  |_|\___|\__\__,_|_|
+----------------------------------------------------------
+```
+
+## Disclaimer:
+**HackN'Metal** is designed for **research and educational purposes only**. This tool should only be used on systems that you own or have explicit permission to test. Unauthorized access to computer systems is illegal and unethical.
+
+Use this tool responsibly and in compliance with all applicable laws and regulations.
+
+## What is HackN'Metal?
+
 **HackN’Metal** is a badass pentesting tool for lazy hackers who live and breathe metal. It automates reconnaissance, port scanning, enumeration, vulnerability scanning, and exploitation while spitting out some heavy, no-nonsense metal-flavored commentary.
 
 ## Features:
-- **Reconnaissance**: Dig deep into target info.
-- **Port Scanning**: Scan ports like a Meshuggah riff.
-- **Enumeration**: Identify services and users in the target network.
-- **Vulnerability Scanning**: Hunt for weak spots in the system.
-- **Exploitation**: Time to break things and take control!
+1. **Reconnaissance**: Perform a deep information gathering on the target.
+2. **Port Scanning**: Scan open ports like a Meshuggah riff.
+3. **Enumeration**: Discover network services, users, and other important details.
+4. **Vulnerability Scanning**: Identify known vulnerabilities using Nmap scripts.
+5. **Exploitation**: Execute automated exploit attempts using Metasploit.
+6. **Run All Tests**: Perform all steps in one go without interaction.
+7. **AI-Driven Recommendations**: Analyze scan results using AI to suggest next steps or known vulnerabilities (NEW).
 
-## Installation Guide
+## AI-Driven Recommendations
 
-### 1. Prerequisites
-Before you begin, you need to have Python 3 installed along with some basic pentesting tools like `nmap`, `whois`, `enum4linux`, and `metasploit`. Follow the instructions below for your OS.
+**AI-Driven Recommendations** is a powerful feature in **HackN'Metal** that provides actionable insights based on scan results.
 
-### 2. Install on Linux (Debian-based distros like Ubuntu)
+### How it works:
+- After performing a reconnaissance or port scan, the tool analyzes the scan results (e.g., services like Apache or MySQL).
+- The AI will look for known vulnerabilities (CVE entries, Exploits) related to the identified services and their versions.
+- It provides recommendations on what to do next, such as running an exploit or patching vulnerable services.
 
-1. **Update and install the required tools**:
-   ```bash
-   sudo apt-get update
-   sudo apt-get install -y python3 python3-pip whois nmap enum4linux metasploit-framework
-   ```
+This feature helps users by automatically suggesting further actions and even specific known vulnerabilities that match the services found.
 
-2. **Clone the repository**:
-   ```bash
-   git clone https://github.com/yourusername/hacknmetal.git
-   cd hacknmetal
-   ```
+### Example Output:
+```
+[*] Found vulnerability in Apache 2.4.49: CVE-2021-41773
+    Exploit for path traversal in Apache
 
-3. **Run the script**:
-   ```bash
-   python3 hacknmetal.py
-   ```
+[+] Further steps: Consider running an exploit or patching the vulnerable services.
+```
 
-### 3. Install on macOS
+## Installation
 
-1. **Install Homebrew** (if you don't have it already):
-   ```bash
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-   ```
+### Prerequisites:
+- Python 3.x
+- `nmap`
+- `enum4linux`
+- `msfconsole` (Metasploit Framework)
 
-2. **Install the required tools**:
-   ```bash
-   brew install python3 nmap whois
-   brew install --cask metasploit
-   ```
+Make sure these tools are installed on your system.
 
-3. **Clone the repository**:
+### Installation Steps:
+1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/hacknmetal.git
    cd hacknmetal
    ```
 
-4. **Run the script**:
+2. Install the necessary tools:
+   ```bash
+   # On Debian-based systems (e.g., Ubuntu):
+   sudo apt-get install python3 nmap enum4linux metasploit-framework
+   ```
+
+3. Run the script:
    ```bash
    python3 hacknmetal.py
    ```
 
-### 4. Install on Windows
+## Usage
 
-1. **Install Python**: 
-   - Download and install Python 3.x from the official site: [Python Download](https://www.python.org/downloads/)
-   - Make sure to check the box **"Add Python to PATH"** during installation.
+### Menu Options:
+- **1. Reconnaissance**: Perform information gathering.
+- **2. Scanning**: Scan open ports on the target.
+- **3. Enumeration**: Identify services and users.
+- **4. Vulnerability Scanning**: Identify potential vulnerabilities.
+- **5. Exploitation**: Attempt to exploit identified vulnerabilities.
+- **6. Run All Tests**: Run all the above steps in sequence.
+- **7. AI-Driven Recommendations**: Get AI-based recommendations on further actions.
+- **8. Exit**: Exit the tool and get back to your music.
 
-2. **Install the required tools**:
-   - Download and install **Nmap**: [Nmap for Windows](https://nmap.org/download.html#windows)
-   - Install **Metasploit**: [Metasploit for Windows](https://windows.metasploit.com/)
-   - Use **Windows Subsystem for Linux (WSL)** to install **whois** and **enum4linux**:
-     1. Open PowerShell as Administrator and run:
-        ```powershell
-        wsl --install
-        ```
-     2. Inside the WSL terminal (after it's installed), run:
-        ```bash
-        sudo apt-get install whois enum4linux
-        ```
+### Example Workflow:
 
-3. **Clone the repository**:
-   - Open PowerShell or Command Prompt and run:
-     ```powershell
-     git clone https://github.com/yourusername/hacknmetal.git
-     cd hacknmetal
-     ```
-
-4. **Run the script**:
-   ```powershell
-   python hacknmetal.py
-   ```
-
-## Usage Instructions
-
-1. Run the tool by executing:
+1. Run the tool:
    ```bash
    python3 hacknmetal.py
    ```
 
-2. You will see a menu with the following options:
-   ```
-   -----------------------------------
-    HackN’Metal — Hacking with Attitude!
-   -----------------------------------
-   1. Reconnaissance (Dig Deep Like a Heavy Bassline)
-   2. Scanning (Ports are gonna tremble)
-   3. Enumeration (Find who’s playing what in this network jam)
-   4. Vulnerability Scanning (Someone here is weak as f***)
-   5. Exploitation (It’s time to destroy!)
-   6. Run All Tests (Cause you don’t have time for bullshit)
-   7. Exit and go blast some f***ing metal!
-   -----------------------------------
-   Your move, badass. Pick something [1-7]:
+2. Choose an option from the menu, for example, **1. Reconnaissance**.
+
+3. Input the target you want to scan:
+   ```bash
+   Enter the target to scan: 192.168.1.1
    ```
 
-3. Choose an option and follow the prompts to enter the target.
+4. Let the tool do its magic, providing useful and humorous feedback.
 
--------------------------------------------------------
-                Created with chaos by sleep33
--------------------------------------------------------
+5. To use **AI-Driven Recommendations**, choose **7** after performing reconnaissance. The AI will suggest vulnerabilities and potential next steps.
+
+## License
+
+This project is licensed under the MIT License.
