@@ -1,15 +1,7 @@
 
 # HackN’Metal - Pentesting Like a Metalhead
 
-```
- _    _            _     _   _      __  __      _        _ 
-| |  | |          (_)   | | | |    |  \/  |    | |      | |
-| |__| | __ _ _ __ _ ___| |_| | ___| \  / | ___| |_ __ _| |
-|  __  |/ _` | '__| / __| __| |/ _ \ |\/| |/ _ \ __/ _` | |
-| |  | | (_| | |  | \__ \ |_| |  __/ |  | |  __/ || (_| | |
-|_|  |_|\__,_|_|  |_|___/\__|_|\___|_|  |_|\___|\__\__,_|_|
-----------------------------------------------------------
-
+![Cover](https://github.com/user-attachments/assets/12bfe2c0-0242-43d4-95e5-a884c60358f8)
 ## What is HackN’Metal?
 **HackN’Metal** is a badass pentesting tool for lazy hackers who live and breathe metal. It automates reconnaissance, port scanning, enumeration, vulnerability scanning, and exploitation while spitting out some heavy, no-nonsense metal-flavored commentary.
 
